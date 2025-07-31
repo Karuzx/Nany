@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffe6f0;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.active {
+  display: flex;
+}
+
+#passwordScreen {
+  background-color: #ffccd5;
+}
+
+#notepadScreen {
+  background-color: #fff0f5;
+  animation: openCard 1.2s ease forwards;
+}
+
+@keyframes openCard {
+  0% {
+    transform: translateY(100px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.password-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#passwordInput {
+  font-size: 24px;
+  letter-spacing: 10px;
+  padding: 10px;
+  border: 2px solid #ff99aa;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffe6ec;
+  color: #ff3366;
+}
+
+.keypad {
+  margin-top: 20px;
+}
+
+.keypad button {
+  font-size: 24px;
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff99aa;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.keypad button:hover {
+  background-color: #ff6688;
+}
+
+.notepad {
+  background: #fffaf0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #ff3366;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 5s linear infinite;
+  opacity: 0.8;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
