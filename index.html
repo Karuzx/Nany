@@ -146,7 +146,7 @@
     </p>
   </div>
 </div>
-<audio id="bgMusic" src="Build/GoneGone.mp3" loop></audio>
+<audio id="musicaRomantica" src="Build/GoneGone.mp3" loop preload="auto"></audio>
 <script>
   const correctPassword = '0401';
   let input = '';
@@ -160,10 +160,10 @@
       if (input === correctPassword) {
         document.getElementById('passwordScreen').classList.remove('active');
         document.getElementById('notepadScreen').classList.add('active');
-        document.getElementById('bgMusic').play();
+        document.getElementById('musicaRomantica').play();
         generateHearts();
       } else {
-        alert('Contraseña incorrecta, no se vale preguntar :b');
+        alert('Contraseña incorrecta, no se vale preguntar');
         input = '';
         updateDisplay();
       }
